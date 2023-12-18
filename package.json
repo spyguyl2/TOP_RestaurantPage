@@ -1,0 +1,17 @@
+{
+  "name": "top_restaurantpage",
+  "version": "1.0.0",
+  "description": "Sample restaurant page to practice what I've learned about modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "author": "Damon Haase",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

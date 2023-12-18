@@ -1,0 +1,17 @@
+body {
+    background-image: url("./minimalist-background-6728257_1280.jpg");
+    background-repeat: space;
+    background-color: rgba(101, 146, 18, 0.332);
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 400px;
+    width: 300px;
+}
