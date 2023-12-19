@@ -10,16 +10,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/createLanding.js":
-/*!******************************!*\
-  !*** ./src/createLanding.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _domKit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domKit */ \"./src/domKit.js\");\n\n\nconst createLanding = () => {\n    (0,_domKit__WEBPACK_IMPORTED_MODULE_0__.setParent)('#content');\n\n    (0,_domKit__WEBPACK_IMPORTED_MODULE_0__.create)().image('./seedsCafe.jpg', 'Image showcasing the restaurant');\n    (0,_domKit__WEBPACK_IMPORTED_MODULE_0__.create)().text('h1', 'The Seeds Cafe!');\n    (0,_domKit__WEBPACK_IMPORTED_MODULE_0__.create)().text('p', 'Such an amazing place to spend your money!');\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createLanding);\n\n//# sourceURL=webpack://top_restaurantpage/./src/createLanding.js?");
-
-/***/ }),
-
 /***/ "./src/domKit.js":
 /*!***********************!*\
   !*** ./src/domKit.js ***!
@@ -36,7 +26,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createLanding__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createLanding */ \"./src/createLanding.js\");\n\n\nconst clearPage = () => {\n    const content = document.querySelector('#content');\n    const elements = content.children;\n    Array.from(elements).forEach(element => {\n        if (element.getAttribute('id') != 'navbar') element.remove();\n    })\n}\n\n\n\nconst navBar = document.createElement('div');\nnavBar.setAttribute('id', 'navbar');\nconst content = document.querySelector('#content');\ncontent.appendChild(navBar);\n\nconst landingBtn = document.createElement('btn');\nconst menuBtn = document.createElement('btn');\nconst contactBtn = document.createElement('btn');\n\nlandingBtn.textContent = 'Home';\nmenuBtn.textContent = 'Menu';\ncontactBtn.textContent = 'Contact Us';\n\nlandingBtn.addEventListener('click', () => {\n    clearPage();\n})\n\n\nnavBar.appendChild(landingBtn);\nnavBar.appendChild(menuBtn);\nnavBar.appendChild(contactBtn);\n\n(0,_createLanding__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://top_restaurantpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _loadLanding__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loadLanding */ \"./src/loadLanding.js\");\n/* harmony import */ var _loadContacts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadContacts */ \"./src/loadContacts.js\");\n/* harmony import */ var _loadMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./loadMenu */ \"./src/loadMenu.js\");\n\n\n\n\nconst clearPage = () => {\n    const content = document.querySelector('#content');\n    const elements = content.children;\n    Array.from(elements).forEach(element => {\n        if (element.getAttribute('id') != 'navbar') element.remove();\n    })\n}\n\n\n\nconst navBar = document.createElement('div');\nnavBar.setAttribute('id', 'navbar');\nconst content = document.querySelector('#content');\ncontent.appendChild(navBar);\n\nconst landingBtn = document.createElement('btn');\nconst menuBtn = document.createElement('btn');\nconst contactBtn = document.createElement('btn');\n\nlandingBtn.textContent = 'Home';\nmenuBtn.textContent = 'Menu';\ncontactBtn.textContent = 'Contact Us';\n\nlandingBtn.addEventListener('click', () => {\n    clearPage();\n    (0,_loadLanding__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n})\n\nmenuBtn.addEventListener('click', () => {\n    clearPage();\n    (0,_loadMenu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n});\n\ncontactBtn.addEventListener('click', () => {\n    clearPage();\n    (0,_loadContacts__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n})\n\n\nnavBar.appendChild(landingBtn);\nnavBar.appendChild(menuBtn);\nnavBar.appendChild(contactBtn);\n\ncreateLanding();\n\n//# sourceURL=webpack://top_restaurantpage/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/loadContacts.js":
+/*!*****************************!*\
+  !*** ./src/loadContacts.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst createContact = (name, tel, imgUrl) => {\n    const contactBlock = document.createElement('div');\n    contactBlock.classList.toggle('contactBlock');\n\n}\n\nconst loadContacts = () => {\n    \n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadContacts);\n\n//# sourceURL=webpack://top_restaurantpage/./src/loadContacts.js?");
+
+/***/ }),
+
+/***/ "./src/loadLanding.js":
+/*!****************************!*\
+  !*** ./src/loadLanding.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _domKit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domKit */ \"./src/domKit.js\");\n\n\nconst loadLanding = () => {\n    (0,_domKit__WEBPACK_IMPORTED_MODULE_0__.setParent)('#content');\n\n    (0,_domKit__WEBPACK_IMPORTED_MODULE_0__.create)().image('./seedsCafe.jpg', 'Image showcasing the restaurant');\n    (0,_domKit__WEBPACK_IMPORTED_MODULE_0__.create)().text('h1', 'The Seeds Cafe!');\n    (0,_domKit__WEBPACK_IMPORTED_MODULE_0__.create)().text('p', 'Such an amazing place to spend your money!');\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadLanding);\n\n//# sourceURL=webpack://top_restaurantpage/./src/loadLanding.js?");
+
+/***/ }),
+
+/***/ "./src/loadMenu.js":
+/*!*************************!*\
+  !*** ./src/loadMenu.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst loadMenu = () => {\n    \n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadMenu);\n\n//# sourceURL=webpack://top_restaurantpage/./src/loadMenu.js?");
 
 /***/ })
 

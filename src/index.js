@@ -1,4 +1,6 @@
-import createLanding from "./createLanding";
+import loadLanding from "./loadLanding";
+import loadContacts from "./loadContacts";
+import loadMenu from "./loadMenu";
 
 const clearPage = () => {
     const content = document.querySelector('#content');
@@ -25,6 +27,17 @@ contactBtn.textContent = 'Contact Us';
 
 landingBtn.addEventListener('click', () => {
     clearPage();
+    loadLanding();
+})
+
+menuBtn.addEventListener('click', () => {
+    clearPage();
+    loadMenu();
+});
+
+contactBtn.addEventListener('click', () => {
+    clearPage();
+    loadContacts();
 })
 
 

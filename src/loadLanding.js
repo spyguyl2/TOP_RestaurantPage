@@ -1,6 +1,6 @@
 import { create, setParent } from "./domKit";
 
-const createLanding = () => {
+const loadLanding = () => {
     setParent('#content');
 
     create().image('./seedsCafe.jpg', 'Image showcasing the restaurant');
@@ -8,4 +8,4 @@ const createLanding = () => {
     create().text('p', 'Such an amazing place to spend your money!');
 }
 
-export default createLanding;
+export default loadLanding;
