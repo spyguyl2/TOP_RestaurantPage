@@ -14,4 +14,22 @@ body {
 img {
     height: 400px;
     width: 300px;
+    margin-top: 20px;
+}
+
+#navbar {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    width: 250px;
+}
+
+btn {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+btn:hover {
+    color: teal;
+    cursor: pointer;
 }

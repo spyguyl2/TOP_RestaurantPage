@@ -2,9 +2,10 @@ import createLanding from "./createLanding";
 
 const clearPage = () => {
     const content = document.querySelector('#content');
-    let elements = content.children;
-
-    //get all children and remove them. But not the buttons or their navbar div
+    const elements = content.children;
+    Array.from(elements).forEach(element => {
+        if (element.getAttribute('id') != 'navbar') element.remove();
+    })
 }
 
 
@@ -14,6 +15,21 @@ navBar.setAttribute('id', 'navbar');
 const content = document.querySelector('#content');
 content.appendChild(navBar);
 
+const landingBtn = document.createElement('btn');
+const menuBtn = document.createElement('btn');
+const contactBtn = document.createElement('btn');
 
+landingBtn.textContent = 'Home';
+menuBtn.textContent = 'Menu';
+contactBtn.textContent = 'Contact Us';
+
+landingBtn.addEventListener('click', () => {
+    clearPage();
+})
+
+
+navBar.appendChild(landingBtn);
+navBar.appendChild(menuBtn);
+navBar.appendChild(contactBtn);
 
 createLanding();
