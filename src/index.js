@@ -45,4 +45,4 @@ navBar.appendChild(landingBtn);
 navBar.appendChild(menuBtn);
 navBar.appendChild(contactBtn);
 
-createLanding();
+loadLanding();

@@ -33,3 +33,21 @@ btn:hover {
     color: teal;
     cursor: pointer;
 }
+
+.contactBlock, .menuItem {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+}
+
+.nameSectionBlock, .namePriceBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactBlock>img, .menuItem>img {
+    width: 100px;
+    height: 100px;
+}
